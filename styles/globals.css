@@ -1,0 +1,66 @@
+@font-face {
+  font-family: ClashDisplay;
+  src: url("../src/assets/fonts/ClashDisplay/ClashDisplay-Regular.otf");
+}
+
+@font-face {
+  font-family: ClashDisplayBold;
+  src: url("../src/assets/fonts/ClashDisplay/ClashDisplay-Bold.otf");
+}
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: ClashDisplay, sans-serif, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: ClashDisplay;
+}
+.rdt_Table {
+  padding-bottom: 15px;
+  position: relative;
+  z-index: 10;
+  max-width: 100%;
+  overflow-y: auto;
+  margin-top: 10px;
+  min-height: 500px;
+}
+.rdt_TableHeadRow {
+  color: rgba(18, 38, 68, 1);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.rdt_TableRow {
+  height: 52px;
+  text-align: center;
+}
+.spinner {
+  color: red;
+}
+.rdt_TableCol {
+  width: 160px;
+  text-align: center;
+}
+.rdt_TableCell {
+  text-align: center;
+  color: rgba(16, 24, 40, 1);
+  font-weight: 200;
+}
+/* .rdt_TableFooter {
+  margin: 0 auto;
+  background-color: red;
+} */

@@ -1,0 +1,55 @@
+name: admin-staging
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: digitadmin-staging
+
+    strategy:
+      matrix:
+        node-version: [21.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: git pull    
+      run: git pull origin main
+    
+#    - name: Clear cache
+#      run: npm cache clean --force
+
+#    - name: Move .env to document root.
+#      run: cp ~/temp/flip/.env ~/flip/_work/flip/flip
+    
+    - name: Remove node modules.
+      run: rm -rf node_modules
+
+    - name: Install dependencies
+      run: yarn install
+      
+    - name: yarn install typescript
+      run: yarn global add typescript@latest
+      
+#    - name: Typescript
+#      run: tsc --init
+    
+    - name: Build    
+      run: yarn build
+      
+    - name: pm2 stop
+      run: cd ~/digitadmin/_work/digitAdmin/digitAdmin && pm2 stop admin
+      
+    - name: pm2 delete
+      run: pm2 delete admin
+      
+    - name: pm2 start
+      run: cd ~/digitadmin/_work/digitAdmin/digitAdmin && pm2 start yarn --interpreter bash --name admin -- start --port 4000
