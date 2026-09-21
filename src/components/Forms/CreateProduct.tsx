@@ -261,7 +261,6 @@ const CreateProduct = ({ title, id, merchantID }: any) => {
               });
             }}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="Category"
           >
             {productCategories?.map((item: any) => (
               <option
@@ -294,7 +293,6 @@ const CreateProduct = ({ title, id, merchantID }: any) => {
               });
             }}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="discount"
           >
             {delivery?.map((item: any) => (
               <option
@@ -371,7 +369,6 @@ const CreateProduct = ({ title, id, merchantID }: any) => {
               });
             }}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="Delivery Tag"
           >
             {delivery?.map((item: any) => (
               <option

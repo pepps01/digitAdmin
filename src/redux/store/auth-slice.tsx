@@ -75,7 +75,7 @@ const authSlice = createSlice({
       sessionStorage.removeItem("accessToken");
       state.token = "";
       state.adminDetails = {};
-      window.location.href = "/";
+      window.location.href = "/admin";
     },
   },
   extraReducers: builder => {
