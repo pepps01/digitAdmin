@@ -206,7 +206,6 @@ const AddService = ({ id, title, merchantID }: any) => {
             id="category"
             onChange={inputChange}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="Category"
           >
             {serviceCategories?.map((item: any) => (
               <option
@@ -333,7 +332,6 @@ const AddService = ({ id, title, merchantID }: any) => {
               fetchLocalGovernments(e?.target?.value);
             }}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="State"
           >
             {states?.map((item: any) => (
               <option
@@ -362,7 +360,6 @@ const AddService = ({ id, title, merchantID }: any) => {
               inputChange(e);
             }}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder="LGA"
           >
             {localGovernments?.map((item: any) => (
               <option
