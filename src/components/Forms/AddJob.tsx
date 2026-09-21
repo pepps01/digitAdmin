@@ -186,7 +186,6 @@ const AddJob = ({ id, title }: any) => {
             id="level"
             onChange={inputChange}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder=" Experience Level"
           >
             {productLevel?.map((item: any) => (
               <option
@@ -291,7 +290,6 @@ const AddJob = ({ id, title }: any) => {
             id="negotiate"
             onChange={inputChange}
             className="border-[0.5px] border-lightGrey relative rounded-[10px] bg-white text-[12px] placeholder:text-[10px] placeholder:text-softGrey w-full h-full focus:outline-none focus:bg-white target:outline-none target:bg-white active:bg-white px-2 py-3 text-grey"
-            placeholder=" Negotiatiable"
           >
             {negotiable?.map((item: any) => (
               <option
