@@ -20,9 +20,10 @@ function MyApp({ Component, pageProps, param }: any) {
   }, []);
 
   useEffect(() => {
+    const isProtected = /^\/(dashboard|cue|flip)(\/|$)/.test(router.pathname);
     const accessToken = sessionStorage.getItem("accessToken");
-    if (!accessToken) {
-      router.push("/");
+    if (isProtected && !accessToken) {
+      router.push("/admin");
     }
   }, [router]);
 
