@@ -15,6 +15,9 @@ import logSlice from "./features/log-slice";
 import transactionSlice from "./features/transaction-slice";
 import tripSlice from "./features/trip-slice";
 import sosSlice from "./features/sos-slice";
+import userManagementSlice from "./features/user-management-slice";
+import driverManagementSlice from "./features/driver-management-slice";
+import superAdminSlice from "./features/super-admin-slice";
 
 export function makeStore() {
   return configureStore({
@@ -34,6 +37,9 @@ export function makeStore() {
       serviceCategory: serviceCategorySlice,
       trip: tripSlice,
       sos: sosSlice,
+      userManagement: userManagementSlice,
+      driverManagement: driverManagementSlice,
+      superAdmin: superAdminSlice,
     },
   });
 }

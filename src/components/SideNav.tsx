@@ -40,7 +40,12 @@ const SideNav = ({ showNav, setShowNav }: any) => {
     >
       <div className="bg-[#1D2939]  w-[60px] rounded-r-3xl py-10 flex flex-col items-center">
         <ul className="mt-[70px] flex flex-col gap-2">
-          {innerNav.map((item: any) => (
+          {innerNav
+            .filter(
+              (item: any) =>
+                !item.superadminOnly || adminDetails?.role === "superadmin"
+            )
+            .map((item: any) => (
             <div
               key={item.id}
               className="flex flex-col items-center justify-center "
